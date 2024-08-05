@@ -1,10 +1,13 @@
 import IntroSection from '@/components/custom/IntroSection';
+import SkillsSection from '@/components/custom/SkillsSection';
 import { getHomePageData } from '@/data/loaders';
 
 function blockRenderer(block: any) {
   switch (block.__component) {
     case 'layout.intro-section':
       return <IntroSection key={block.id} data={block} />;
+    case 'layout.skills-section':
+      return <SkillsSection key={block.id} data={block} />;
     default:
       return null;
   }

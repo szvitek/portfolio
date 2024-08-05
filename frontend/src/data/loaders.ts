@@ -24,12 +24,20 @@ async function fetchData(url: string) {
   }
 }
 
+// todo: maybe more fine tuned populates
 export async function getHomePageData() {
   const url = new URL('/api/home-page', baseUrl);
   url.search = qs.stringify({
     populate: {
       blocks: {
-        populate: ['image', 'cv', 'links'],
+        populate: {
+          image: '*',
+          cv: '*',
+          links: '*',
+          skills: {
+            populate: ['name', 'icon'],
+          },
+        },
       },
     },
   });

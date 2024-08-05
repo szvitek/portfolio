@@ -68,6 +68,10 @@
   }
 }
 
+body {
+  @apply from-slate-50 to-slate-300 bg-gradient-to-b;
+}
+
 section {
-  @apply border-2 rounded-md p-8;
+  @apply border-slate-800 border-2 rounded-md p-8 mb-12;
 }

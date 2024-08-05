@@ -92,7 +92,7 @@ export default function IntroSection({ data }: IntroSectionProps) {
           className="rounded-full"
         />
 
-        {/* maybe make a separate component for status  */}
+        {/* todo: maybe make a separate component for status  */}
         <div>
           <div className="flex items-center justify-center gap-2">
             Status:{' '}

@@ -21,7 +21,8 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "layout.intro-section"
+        "layout.intro-section",
+        "layout.skills-section"
       ]
     }
   }

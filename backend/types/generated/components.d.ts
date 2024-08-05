@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface LayoutSkillsSection extends Schema.Component {
+  collectionName: 'components_layout_skills_sections';
+  info: {
+    displayName: 'Skills Section';
+  };
+  attributes: {
+    skills: Attribute.Relation<
+      'layout.skills-section',
+      'oneToMany',
+      'api::skill.skill'
+    >;
+  };
+}
+
 export interface LayoutIntroSection extends Schema.Component {
   collectionName: 'components_layout_intro_sections';
   info: {
@@ -35,6 +49,7 @@ export interface ComponentsButtonLink extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'layout.skills-section': LayoutSkillsSection;
       'layout.intro-section': LayoutIntroSection;
       'components.button-link': ComponentsButtonLink;
     }
