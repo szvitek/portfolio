@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_layout_intro_sections",
+  "info": {
+    "displayName": "Intro Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "maybe",
+        "busy"
+      ]
+    },
+    "links": {
+      "displayName": "buttonLink",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.button-link"
+    },
+    "cv": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

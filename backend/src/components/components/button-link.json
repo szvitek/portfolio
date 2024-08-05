@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_button_links",
+  "info": {
+    "displayName": "buttonLink",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "GITHUB",
+        "LINKEDIN"
+      ]
+    }
+  }
+}
