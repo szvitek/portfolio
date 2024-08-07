@@ -803,7 +803,12 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     title: Attribute.String;
     description: Attribute.Text;
     blocks: Attribute.DynamicZone<
-      ['layout.intro-section', 'layout.skills-section', 'layout.jobs-section']
+      [
+        'layout.intro-section',
+        'layout.skills-section',
+        'layout.jobs-section',
+        'layout.education-section'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

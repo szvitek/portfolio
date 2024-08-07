@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_schools",
+  "info": {
+    "displayName": "School"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "faculty": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

@@ -67,7 +67,7 @@ export default function JobsSections({ data }: JobsSectionsProps) {
           </Button>
         ))}
       </div>
-      <div className="flex flex-col gap-y-4 mt-12 md:mt-0">
+      <div className="flex flex-col gap-y-4 mt-12 md:mt-0 border border-slate-500 rounded-md p-6">
         <div className="flex flex-col-reverse md:flex-row md:items-center justify-between">
           <div>
             <Button asChild variant="link" className="inline">

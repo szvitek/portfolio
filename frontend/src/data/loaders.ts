@@ -47,6 +47,9 @@ export async function getHomePageData() {
                 fields: ['id', 'name']
               }
             }
+          },
+          schools: {
+            fields: ['id', 'name', 'faculty', 'startDate', 'endDate']
           }
         },
       },

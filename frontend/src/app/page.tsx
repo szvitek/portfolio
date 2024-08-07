@@ -1,3 +1,4 @@
+import EducationSection from '@/components/custom/EducationSection';
 import IntroSection from '@/components/custom/IntroSection';
 import JobsSections from '@/components/custom/JobsSections';
 import SkillsSection from '@/components/custom/SkillsSection';
@@ -11,6 +12,8 @@ function blockRenderer(block: any) {
       return <SkillsSection key={block.__component} data={block} />;
     case 'layout.jobs-section':
       return <JobsSections key={block.__component} data={block} />;
+    case 'layout.education-section':
+      return <EducationSection key={block.__component} data={block} />;
     default:
       return null;
   }
@@ -18,7 +21,7 @@ function blockRenderer(block: any) {
 
 export default async function Home() {
   const strapiData = await getHomePageData();
-  console.dir(strapiData, { depth: null });
+  // console.dir(strapiData, { depth: null });
 
   const { blocks } = strapiData;
   if (!blocks) return <div>No blocks found</div>;

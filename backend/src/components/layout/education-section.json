@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_education_sections",
+  "info": {
+    "displayName": "Education Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "schools": {
+      "displayName": "School",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.school"
+    }
+  }
+}

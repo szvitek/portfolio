@@ -46,6 +46,30 @@ export interface LayoutIntroSection extends Schema.Component {
   };
 }
 
+export interface LayoutEducationSection extends Schema.Component {
+  collectionName: 'components_layout_education_sections';
+  info: {
+    displayName: 'Education Section';
+    description: '';
+  };
+  attributes: {
+    schools: Attribute.Component<'components.school', true>;
+  };
+}
+
+export interface ComponentsSchool extends Schema.Component {
+  collectionName: 'components_components_schools';
+  info: {
+    displayName: 'School';
+  };
+  attributes: {
+    name: Attribute.String;
+    faculty: Attribute.String;
+    startDate: Attribute.Date;
+    endDate: Attribute.Date;
+  };
+}
+
 export interface ComponentsButtonLink extends Schema.Component {
   collectionName: 'components_components_button_links';
   info: {
@@ -66,6 +90,8 @@ declare module '@strapi/types' {
       'layout.skills-section': LayoutSkillsSection;
       'layout.jobs-section': LayoutJobsSection;
       'layout.intro-section': LayoutIntroSection;
+      'layout.education-section': LayoutEducationSection;
+      'components.school': ComponentsSchool;
       'components.button-link': ComponentsButtonLink;
     }
   }
