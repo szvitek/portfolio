@@ -50,6 +50,14 @@ export async function getHomePageData() {
           },
           schools: {
             fields: ['id', 'name', 'faculty', 'startDate', 'endDate']
+          },
+          certifications: {
+            fields: ['id', 'title', 'organization', 'date', 'url', 'details'],
+            populate: {
+              image: {
+                fields: ['id', 'name', 'width', 'height', 'url']
+              }
+            }
           }
         },
       },

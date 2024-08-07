@@ -1,3 +1,4 @@
+import CertificationsSection from '@/components/custom/CertificationsSection';
 import EducationSection from '@/components/custom/EducationSection';
 import IntroSection from '@/components/custom/IntroSection';
 import JobsSections from '@/components/custom/JobsSections';
@@ -14,6 +15,8 @@ function blockRenderer(block: any) {
       return <JobsSections key={block.__component} data={block} />;
     case 'layout.education-section':
       return <EducationSection key={block.__component} data={block} />;
+    case 'layout.certifications-section':
+      return <CertificationsSection key={block.__component} data={block} />;
     default:
       return null;
   }

@@ -807,7 +807,8 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
         'layout.intro-section',
         'layout.skills-section',
         'layout.jobs-section',
-        'layout.education-section'
+        'layout.education-section',
+        'layout.certifications-section'
       ]
     >;
     createdAt: Attribute.DateTime;

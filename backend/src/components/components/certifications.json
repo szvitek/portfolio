@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_components_certifications",
+  "info": {
+    "displayName": "Certifications"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "details": {
+      "type": "blocks"
+    }
+  }
+}

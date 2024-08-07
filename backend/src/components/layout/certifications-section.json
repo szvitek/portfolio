@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_certifications_sections",
+  "info": {
+    "displayName": "Certifications Section"
+  },
+  "options": {},
+  "attributes": {
+    "certifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.certifications"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

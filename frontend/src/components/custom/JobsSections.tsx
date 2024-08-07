@@ -71,8 +71,8 @@ export default function JobsSections({ data }: JobsSectionsProps) {
         <div className="flex flex-col-reverse md:flex-row md:items-center justify-between">
           <div>
             <Button asChild variant="link" className="inline">
-              <a href={selectedJob.website}>
-                <div className="flex items-center gap-4 border border-slate-500 py-2 px-4 rounded-md">
+              <a href={selectedJob.website} target="_blank">
+                <div className="flex items-center gap-4 border border-slate-500 py-2 px-4 rounded-md text-pretty">
                   <StrapiImage
                     className="h-[100px] w-[100px] object-contain"
                     src={selectedJob.image.url}

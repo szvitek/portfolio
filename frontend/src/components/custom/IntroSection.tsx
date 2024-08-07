@@ -56,14 +56,16 @@ export default function IntroSection({ data }: IntroSectionProps) {
   return (
     <section className="flex flex-col-reverse md:grid md:grid-cols-[70%_1fr] gap-4">
       <div className="flex flex-col justify-between">
-        <h1>{data.heading}</h1>
-        <p>{data.subHeading}</p>
+        <div className="text-center">
+          <h1 className="text-3xl font-bold">{data.heading}</h1>
+          <h2 className="text-xl text-slate-800">{data.subHeading}</h2>
+        </div>
 
         <div className="text-justify">{data.intro}</div>
 
-        <p>{data.ctaText}</p>
+        <p className="text-xl text-slate-800 text-center">{data.ctaText}</p>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           <Button asChild>
             <Link href={getStrapiMedia(data.cv.url)!} target="_blank">
               Download CV
@@ -93,7 +95,7 @@ export default function IntroSection({ data }: IntroSectionProps) {
         />
 
         {/* todo: maybe make a separate component for status  */}
-        <div>
+        <div className="border border-slate-500 rounded-md p-2 mt-4 bg-slate-400/50">
           <div className="flex items-center justify-center gap-2">
             Status:{' '}
             <p

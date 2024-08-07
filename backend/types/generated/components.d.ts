@@ -57,6 +57,17 @@ export interface LayoutEducationSection extends Schema.Component {
   };
 }
 
+export interface LayoutCertificationsSection extends Schema.Component {
+  collectionName: 'components_layout_certifications_sections';
+  info: {
+    displayName: 'Certifications Section';
+  };
+  attributes: {
+    certifications: Attribute.Component<'components.certifications', true>;
+    name: Attribute.String;
+  };
+}
+
 export interface ComponentsSchool extends Schema.Component {
   collectionName: 'components_components_schools';
   info: {
@@ -67,6 +78,21 @@ export interface ComponentsSchool extends Schema.Component {
     faculty: Attribute.String;
     startDate: Attribute.Date;
     endDate: Attribute.Date;
+  };
+}
+
+export interface ComponentsCertifications extends Schema.Component {
+  collectionName: 'components_components_certifications';
+  info: {
+    displayName: 'Certifications';
+  };
+  attributes: {
+    title: Attribute.String;
+    organization: Attribute.String;
+    date: Attribute.Date;
+    url: Attribute.String;
+    image: Attribute.Media<'images'>;
+    details: Attribute.Blocks;
   };
 }
 
@@ -91,7 +117,9 @@ declare module '@strapi/types' {
       'layout.jobs-section': LayoutJobsSection;
       'layout.intro-section': LayoutIntroSection;
       'layout.education-section': LayoutEducationSection;
+      'layout.certifications-section': LayoutCertificationsSection;
       'components.school': ComponentsSchool;
+      'components.certifications': ComponentsCertifications;
       'components.button-link': ComponentsButtonLink;
     }
   }

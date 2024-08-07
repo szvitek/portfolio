@@ -79,3 +79,7 @@ section {
 .job-section ul {
   @apply list-disc ml-6;
 }
+
+.certifications-section ul {
+  @apply list-disc ml-6;
+}
