@@ -73,5 +73,9 @@ body {
 }
 
 section {
-  @apply border-slate-800 border-2 rounded-md p-8 mb-12;
+  @apply border-slate-800 border-2 rounded-md p-8 mb-12 w-full;
+}
+
+.job-section ul {
+  @apply list-disc ml-6;
 }

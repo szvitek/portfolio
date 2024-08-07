@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_layout_jobs_sections",
+  "info": {
+    "displayName": "Jobs Section"
+  },
+  "options": {},
+  "attributes": {
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job"
+    }
+  }
+}

@@ -25,6 +25,7 @@ async function fetchData(url: string) {
 }
 
 // todo: maybe more fine tuned populates
+// todo: move query logic to backend?
 export async function getHomePageData() {
   const url = new URL('/api/home-page', baseUrl);
   url.search = qs.stringify({
@@ -37,6 +38,16 @@ export async function getHomePageData() {
           skills: {
             populate: ['name', 'icon'],
           },
+          jobs: {
+            populate: {
+              image: {
+                fields: ['id', 'url']
+              },
+              skills: {
+                fields: ['id', 'name']
+              }
+            }
+          }
         },
       },
     },

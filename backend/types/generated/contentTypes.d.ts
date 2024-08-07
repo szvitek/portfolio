@@ -803,7 +803,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     title: Attribute.String;
     description: Attribute.Text;
     blocks: Attribute.DynamicZone<
-      ['layout.intro-section', 'layout.skills-section']
+      ['layout.intro-section', 'layout.skills-section', 'layout.jobs-section']
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -819,6 +819,38 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiJobJob extends Schema.CollectionType {
+  collectionName: 'jobs';
+  info: {
+    singularName: 'job';
+    pluralName: 'jobs';
+    displayName: 'Job';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Attribute.String;
+    jobTitle: Attribute.String;
+    location: Attribute.String;
+    website: Attribute.String;
+    startDate: Attribute.Date;
+    endDate: Attribute.Date;
+    image: Attribute.Media<'images'>;
+    companyDescription: Attribute.Text;
+    achievements: Attribute.Blocks;
+    skills: Attribute.Relation<'api::job.job', 'oneToMany', 'api::skill.skill'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -874,6 +906,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::job.job': ApiJobJob;
       'api::skill.skill': ApiSkillSkill;
     }
   }

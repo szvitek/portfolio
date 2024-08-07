@@ -14,6 +14,20 @@ export interface LayoutSkillsSection extends Schema.Component {
   };
 }
 
+export interface LayoutJobsSection extends Schema.Component {
+  collectionName: 'components_layout_jobs_sections';
+  info: {
+    displayName: 'Jobs Section';
+  };
+  attributes: {
+    jobs: Attribute.Relation<
+      'layout.jobs-section',
+      'oneToMany',
+      'api::job.job'
+    >;
+  };
+}
+
 export interface LayoutIntroSection extends Schema.Component {
   collectionName: 'components_layout_intro_sections';
   info: {
@@ -50,6 +64,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'layout.skills-section': LayoutSkillsSection;
+      'layout.jobs-section': LayoutJobsSection;
       'layout.intro-section': LayoutIntroSection;
       'components.button-link': ComponentsButtonLink;
     }
